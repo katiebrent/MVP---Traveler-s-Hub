@@ -1,5 +1,6 @@
 import React from 'react';
 import WhereBeenForm from './WhereBeenForm.jsx'
+import Login from './Login.jsx'
 
 
 const App = (props) => {
@@ -12,7 +13,7 @@ const App = (props) => {
         </div>
       <img src="airplane.png"/>
         <div className="col text-right">
-      <a>Login</a>
+      <Login/>
         </div>
       </div>
       <div className="row">
