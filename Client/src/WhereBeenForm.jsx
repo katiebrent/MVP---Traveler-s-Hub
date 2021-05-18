@@ -10,7 +10,6 @@ const WhereBeenForm = (props) => {
     <div>
       <div className="row">
         <div className="col text-center">
-
           <h4>Where Have You Been?</h4>
         </div>
         </div>
