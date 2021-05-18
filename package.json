@@ -1,0 +1,27 @@
+{
+  "name": "mvp---traveler-s-hub",
+  "version": "1.0.0",
+  "description": "Traveler's Hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiebrent/MVP---Traveler-s-Hub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katiebrent/MVP---Traveler-s-Hub/issues"
+  },
+  "homepage": "https://github.com/katiebrent/MVP---Traveler-s-Hub#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.37.0"
+  }
+}
