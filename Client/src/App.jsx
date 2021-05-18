@@ -16,7 +16,12 @@ const App = (props) => {
         </div>
       </div>
       <div className="row">
-      <h3>Welcome to Traveler's Hub, where you can keep track of where you've been, and plan future trips by connecting with those who have been there before!</h3>
+      <h3>Welcome to Traveler's Hub, where you can keep track of where you've been, and plan future trips by connecting with those who have been there before!
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      </h3>
+
       <h5>Click "Add Country" below to get started!</h5>
       </div>
       <div className="container border">
