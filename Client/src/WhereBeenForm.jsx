@@ -7,10 +7,18 @@ import ShowMeMyStats from './ShowMeMyStats.jsx';
 const WhereBeenForm = (props) => {
 
   return(
+    <div>
+      <div className="row">
+        <div className="col text-center">
+
+          <h4>Where Have You Been?</h4>
+        </div>
+        </div>
     <div className="row">
       <AddCountry/>
       <ShowMeMyStats/>
       <ShowMeMyMap/>
+    </div>
     </div>
 
   )

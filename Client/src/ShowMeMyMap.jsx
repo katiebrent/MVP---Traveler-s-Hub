@@ -3,7 +3,7 @@ import React from 'react';
 
 const ShowMeMyMap = (props) => {
   return (
-    <div>
+    <div className="col text-center">
 
 <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Show Me My Map
@@ -13,7 +13,7 @@ const ShowMeMyMap = (props) => {
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
-        <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 className="modal-title" id="exampleModalLabel">My Map</h5>
         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

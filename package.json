@@ -26,6 +26,7 @@
     "nodemon": "^2.0.7",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
+    "react-bootstrap-country-select": "^0.7.12",
     "react-bootstrap-dropdown": "^0.3.0",
     "react-dom": "^17.0.2",
     "react-modal": "^3.13.1",

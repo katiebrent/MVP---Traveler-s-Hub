@@ -3,7 +3,7 @@ import React from 'react';
 
 const ShowMeMyStats = (props) => {
   return (
-    <div className="col">
+    <div className="col text-center">
 
     <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#stats">
   Show Me My Stats
