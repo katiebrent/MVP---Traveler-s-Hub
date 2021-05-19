@@ -5,7 +5,7 @@ const ShowMeMyStats = (props) => {
   return (
     <div className="col text-center small">
 
-    <button type="button" className="btn btn-primary small" data-toggle="modal" data-target="#stats">
+    <button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#stats">
   Show Me My Stats
     </button>
     <div className="modal" id="stats" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

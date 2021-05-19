@@ -13,8 +13,8 @@ const App = (props) => {
 
 
   return(
-    <div className="container border">
-      <div className="row border">
+    <div className="container border rounded bg-light p-2 shadow-lg">
+      <div className="row p-2">
         <div className="col">
       <h1>Traveler's Hub</h1>
 
@@ -27,7 +27,7 @@ const App = (props) => {
         </div>
       </div>
       <div className="row">
-      <h3 className="container text-center">Welcome to Traveler's Hub, where you can keep track of where you've been, and plan future trips by connecting with those who have been there before!
+      <h3 className="container text-center bg-primary rounded p-2 m-2">Welcome to Traveler's Hub, where you can keep track of where you've been, and plan future trips by connecting with those who have been there before!
       &nbsp;
       &nbsp;
       &nbsp;
@@ -35,14 +35,29 @@ const App = (props) => {
       </h3>
       <h5>{ }</h5>
       </div>
-      <div className="container border">
-        <WhereBeenForm name={name} countries={countries}/>
+      <div className="row">
+      <div className="container border shadow">
+        <WhereBeenForm name={name} countries={countries} setCountries={setCountries}/>
       </div>
+      </div>
+      <div className="row">
       <div className="container text-center">
       <img src="whereto.png" className="img-fluid"/>
       </div>
-      <div className="container border">
+      </div>
+      <div className="row">
+
+      <div className="container border shadow">
         <WhereToForm/>
+      </div>
+      </div>
+      <div className="row text-center t-2">
+      <h3 className="container text-center bg-primary rounded p-2 m-2">Safe Travels!
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      </h3>
       </div>
     </div>
   )

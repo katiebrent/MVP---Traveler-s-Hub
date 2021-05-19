@@ -8,7 +8,7 @@ const ShowMeMyMap = (props) => {
   return (
     <div className="col text-center">
 
-<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#map">
+<button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#map">
   Show Me My Map
 </button>
 

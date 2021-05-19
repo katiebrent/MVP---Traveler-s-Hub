@@ -6,34 +6,7 @@ const Login = (props) => {
 
   const [login, setLogin] = useState(false);
 
-const loginLink = login ? `Welcome ${name}` :
-  <div>
-    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#login">
-  Login
-</button>
-<div className="modal" id="login" tabIndex="-1" role="dialog">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content">
-        <button type="button" className="close text-right" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      <div className="modal-body">
-        <form>
-          <label className="row text-left">Username:
-          <input placeholder="Enter username here" className="w-100" onChange={(e) => {setName(e.target.value)}} />
-          </label>
-        </form>
-      </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary" onClick={()=> {logIn(name)}}>Login</button>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
-  const addUser = (user, address) => {
+  const addUser = (e, user, address) => {
     axios({
       method: 'POST',
       url: '/user',
@@ -44,18 +17,21 @@ const loginLink = login ? `Welcome ${name}` :
     })
   }
 
-  const logIn = (userName) => {
+  const logIn = (e, userName) => {
     axios.get(`/user/?name=${name}`)
     .then((resp) => {
       setEmail(resp.data[0].email);
       setCountries(resp.data[0].countries);
+      setLogin(true)
     })
     .catch((err) => {
       console.log('error logging in', err)
     })
   }
 
-
+  // if(login) {
+  //   return(`Welcome ${name}!`)
+  // } else {
   return(
     <div className='row'>
       <div className='col'>
@@ -83,17 +59,40 @@ const loginLink = login ? `Welcome ${name}` :
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" onClick={()=> {addUser(name, email)}}>Create Account</button>
+                <button type="button" className="btn btn-primary" onClick={(e)=> {addUser(e, name, email)}}>Create Account</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className='col'>
-      {loginLink}
+      <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#login">
+  Login
+</button>
+<div className="modal" id="login" tabIndex="-1" role="dialog">
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+        <button type="button" className="close text-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div className="modal-body">
+        <form>
+          <label className="row text-left">Username:
+          <input placeholder="Enter username here" className="w-100" onChange={(e) => {setName(e.target.value)}} />
+          </label>
+        </form>
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary" onClick={(e)=> {logIn(e, name)}}>Login</button>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
     </div>
   )
-}
+// }
+};''
 
 export default Login;

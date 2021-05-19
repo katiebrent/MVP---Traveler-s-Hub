@@ -5,7 +5,7 @@ import ShowMeMyStats from './ShowMeMyStats.jsx';
 
 
 const WhereBeenForm = (props) => {
-  const {name, countries} = props;
+  const {name, countries, setCountries} = props;
 
   return(
     <div>
@@ -14,8 +14,8 @@ const WhereBeenForm = (props) => {
           <h4>Where Have You Been?</h4>
         </div>
         </div>
-    <div className="row">
-      <AddCountry name={name}/>
+    <div className="row p-2">
+      <AddCountry name={name} countries={countries} setCountries={setCountries}/>
       <ShowMeMyStats/>
       <ShowMeMyMap countries={countries}/>
     </div>
