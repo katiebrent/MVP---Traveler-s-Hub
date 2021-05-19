@@ -16,7 +16,7 @@ const WhereBeenForm = (props) => {
         </div>
     <div className="row p-2">
       <AddCountry name={name} countries={countries} setCountries={setCountries}/>
-      <ShowMeMyStats/>
+      <ShowMeMyStats countries={countries}/>
       <ShowMeMyMap countries={countries}/>
     </div>
     </div>

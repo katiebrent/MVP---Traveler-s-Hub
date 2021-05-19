@@ -15,11 +15,11 @@ const App = (props) => {
   return(
     <div className="container border rounded bg-light p-2 shadow-lg">
       <div className="row p-2">
-        <div className="col">
+        <div className="col-4">
       <h1>Traveler's Hub</h1>
 
         </div>
-        <div className="col">
+        <div className="col-4">
       <img src="airplane.png" className="img-fluid"/>
         </div>
         <div className="col text-right">

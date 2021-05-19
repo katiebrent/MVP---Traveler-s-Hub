@@ -33,9 +33,9 @@ const Login = (props) => {
   //   return(`Welcome ${name}!`)
   // } else {
   return(
-    <div className='row'>
+    <div className="row">
       <div className='col'>
-        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
           New User
         </button>
         <div className="modal" id="exampleModal" tabIndex="-1" role="dialog">
@@ -65,8 +65,8 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-      <div className='col'>
-      <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#login">
+      <div className='col-4'>
+      <button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#login">
   Login
 </button>
 <div className="modal" id="login" tabIndex="-1" role="dialog">
