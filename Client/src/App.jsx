@@ -9,6 +9,7 @@ import WhereToForm from './WhereToForm.jsx';
 const App = (props) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
+  const [countries, setCountries] = useState(null);
 
 
   return(
@@ -22,7 +23,7 @@ const App = (props) => {
       <img src="airplane.png" className="img-fluid"/>
         </div>
         <div className="col text-right">
-      <Login setName={setName} setEmail={setEmail} name={name} email={email}/>
+      <Login setName={setName} setEmail={setEmail} name={name} email={email} setCountries={setCountries}/>
         </div>
       </div>
       <div className="row">

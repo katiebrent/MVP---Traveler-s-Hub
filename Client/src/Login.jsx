@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Login = (props) => {
-  const { setName, setEmail, name, email } = props;
+  const { setName, setEmail, name, email, setCountries } = props;
 
   const [login, setLogin] = useState(false);
 
@@ -20,13 +20,13 @@ const loginLink = login ? `Welcome ${name}` :
       <div className="modal-body">
         <form>
           <label className="row text-left">Username:
-          <input placeholder="Enter username here" className="w-100"/>
+          <input placeholder="Enter username here" className="w-100" onChange={(e) => {setName(e.target.value)}} />
           </label>
         </form>
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Login</button>
+        <button type="button" className="btn btn-primary" onClick={()=> {logIn(name)}}>Login</button>
       </div>
     </div>
   </div>
@@ -42,7 +42,17 @@ const loginLink = login ? `Welcome ${name}` :
         email: address
       }
     })
+  }
 
+  const logIn = (userName) => {
+    axios.get(`/user/?name=${name}`)
+    .then((resp) => {
+      setEmail(resp.email);
+      setCountries(resp.countries);
+    })
+    .catch((err) => {
+      console.log('error logging in', err)
+    })
   }
 
 

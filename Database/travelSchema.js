@@ -11,6 +11,6 @@ let travelSchema = mongoose.Schema({
 },{collection: "travelers"}
 );
 
-let traveler = mongoose.model('traveler', travelSchema);
+let travelers = mongoose.model('travelers', travelSchema);
 
-module.exports.traveler = traveler;
+module.exports.travelers = travelers;

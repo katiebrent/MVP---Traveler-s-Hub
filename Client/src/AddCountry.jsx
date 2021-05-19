@@ -5,12 +5,20 @@ import axios from 'axios';
 const AddCountry = (props) => {
   const [value, setValue] = useState(null);
   const [budget, setBudget] = useState("Select Budget");
+  const {name} = props;
 
 
   const handleAddCountry = (country, bdgt) => {
     console.log('this is the country object', country)
-
-
+    axios({
+      method: 'PUT',
+      url: '/user',
+      data: {
+        countryObj: country,
+        budget: bdgt,
+        name: name
+      }
+    })
   }
 
   return(
