@@ -18,6 +18,7 @@ const Login = (props) => {
   }
 
   const logIn = (e, userName) => {
+    e.preventDefault();
     axios.get(`/user/?name=${name}`)
     .then((resp) => {
       setEmail(resp.data[0].email);
@@ -29,9 +30,9 @@ const Login = (props) => {
     })
   }
 
-  // if(login) {
-  //   return(`Welcome ${name}!`)
-  // } else {
+  if(login) {
+    return(<h4>Welcome {name}!</h4>)
+  } else {
   return(
     <div className="row">
       <div className='col'>
@@ -59,7 +60,7 @@ const Login = (props) => {
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" onClick={(e)=> {addUser(e, name, email)}}>Create Account</button>
+                <button type="button" className="btn btn-primary" onClick={(e)=> {addUser(e, name, email)}} data-dismiss="modal">Create Account</button>
               </div>
             </div>
           </div>
@@ -84,7 +85,7 @@ const Login = (props) => {
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary" onClick={(e)=> {logIn(e, name)}}>Login</button>
+        <button type="button" className="btn btn-primary" onClick={(e)=> {logIn(e, name)}} data-dismiss="modal">Login</button>
       </div>
     </div>
   </div>
@@ -92,7 +93,7 @@ const Login = (props) => {
         </div>
     </div>
   )
-// }
+}
 };''
 
 export default Login;

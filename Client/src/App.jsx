@@ -36,7 +36,7 @@ const App = (props) => {
       <h5>{ }</h5>
       </div>
       <div className="row">
-      <div className="container border shadow">
+      <div className="container border shadow rounded">
         <WhereBeenForm name={name} countries={countries} setCountries={setCountries}/>
       </div>
       </div>
@@ -47,11 +47,12 @@ const App = (props) => {
       </div>
       <div className="row">
 
-      <div className="container border shadow">
+      <div className="container border shadow rounded">
         <WhereToForm/>
       </div>
       </div>
       <div className="row text-center t-2">
+      <h5>{ }</h5>
       <h3 className="container text-center bg-primary rounded p-2 m-2">Safe Travels!
       &nbsp;
       &nbsp;

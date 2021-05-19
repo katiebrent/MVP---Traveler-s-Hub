@@ -1,7 +1,9 @@
 import React from 'react';
+import Stats from './Stats.jsx'
 
 
 const ShowMeMyStats = (props) => {
+  const {countries} = props;
   return (
     <div className="col text-center small">
 
@@ -18,7 +20,7 @@ const ShowMeMyStats = (props) => {
           </button>
         </div>
         <div className="modal-body">
-          ...
+          <Stats countries={countries}/>
         </div>
       </div>
     </div>
