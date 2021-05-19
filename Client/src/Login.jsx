@@ -47,8 +47,8 @@ const loginLink = login ? `Welcome ${name}` :
   const logIn = (userName) => {
     axios.get(`/user/?name=${name}`)
     .then((resp) => {
-      setEmail(resp.email);
-      setCountries(resp.countries);
+      setEmail(resp.data[0].email);
+      setCountries(resp.data[0].countries);
     })
     .catch((err) => {
       console.log('error logging in', err)

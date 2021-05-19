@@ -3,17 +3,32 @@ import { WorldMap } from "react-svg-worldmap";
 
 
 const TravelMap = (props) => {
-  const data =
-  [
-    { country: "cn", value: 1 }, // china
-    { country: "in", value: 1 }, // india
-    { country: "us", value: 1 }  // united states
-  ]
+  const {countries} = props;
+
+  // const defaultData = [{ country: "us", value: 1 }]
+
+  const dataArr = [];
+
+  const dbData = countries.map((country) => {
+      dataArr.push({"country": country.country_id,
+      "value": 1})
+  })
+
+  const data = dataArr;
+
+  console.log('this is countries data', data, Array.isArray(dataArr))
+if(dataArr.length < 1) {
+  return (
+    "You haven't visited anywhere yet! Start exploring or enter countries you have visited to see them on your map!"
+  )
+} else {
   return (
     <div>
-      <WorldMap color="dodgerblue" data={data} size="lg" />
+      <WorldMap color="dodgerblue" data={data} size="responsive" />
     </div>
   )
+
+}
 }
 
 export default TravelMap;

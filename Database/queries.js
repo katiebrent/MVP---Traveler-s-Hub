@@ -31,7 +31,6 @@ let addUser = (name, email, cb) => {
 }
 
 let addCountry = (request, cb) => {
-  console.log('this is request', request)
   db.travelers.find({name: request.name})
   .then((resp) => {
     const currentCountries = resp[0].countries;

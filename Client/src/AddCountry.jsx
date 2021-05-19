@@ -9,7 +9,6 @@ const AddCountry = (props) => {
 
 
   const handleAddCountry = (country, bdgt) => {
-    console.log('this is the country object', country)
     axios({
       method: 'PUT',
       url: '/user',
