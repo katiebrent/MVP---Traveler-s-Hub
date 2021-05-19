@@ -1,9 +1,18 @@
-import React from 'react';
-import WhereBeenForm from './WhereBeenForm.jsx'
-import Login from './Login.jsx'
+import React, { useState } from 'react';
+import WhereBeenForm from './WhereBeenForm.jsx';
+import Login from './Login.jsx';
+import WhereToForm from './WhereToForm.jsx'
 
 
 const App = (props) => {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [logInClick, setLogInClick] = useState(false);
+
+
+
+
+
   return(
     <div className="container">
       <div className="row">
@@ -13,7 +22,7 @@ const App = (props) => {
         </div>
       <img src="airplane.png"/>
         <div className="col text-right">
-      <Login/>
+      <Login setName={setName} setEmail={setEmail} setLogInClick={setLogInClick}/>
         </div>
       </div>
       <div className="row">
@@ -22,14 +31,13 @@ const App = (props) => {
       &nbsp;
       &nbsp;
       </h3>
-
-      <h5>Click "Add Country" below to get started!</h5>
+      <h5>{ }</h5>
       </div>
       <div className="container border">
         <WhereBeenForm/>
       </div>
-      <div className="container">
-
+      <div className="container border">
+        <WhereToForm/>
       </div>
     </div>
   )

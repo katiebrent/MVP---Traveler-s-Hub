@@ -1,15 +1,16 @@
 import React from 'react';
+import TravelMap from './Map.jsx'
 
 
 const ShowMeMyMap = (props) => {
   return (
     <div className="col text-center">
 
-<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#map">
   Show Me My Map
 </button>
 
-<div className="modal" id="exampleModal" tabIndex="-1" role="dialog">
+<div className="modal" id="map" tabIndex="-1" role="dialog">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
@@ -19,7 +20,7 @@ const ShowMeMyMap = (props) => {
         </button>
       </div>
       <div className="modal-body">
-        hello
+        <TravelMap/>
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
 const Login = (props) => {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
+  const { name, email } = props;
+
   const [login, setLogin] = useState(false);
+
 const loginLink = login ? `Welcome ${name}` :
   <div>
     <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#login">
@@ -12,12 +13,9 @@ const loginLink = login ? `Welcome ${name}` :
 <div className="modal" id="login" tabIndex="-1" role="dialog">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
-      <div className="modal-header">
-        <h5 className="modal-title" id="exampleModalLabel">Enter Your Username</h5>
-        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" className="close text-right" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
       <div className="modal-body">
         <form>
           <label className="row text-left">Username:
