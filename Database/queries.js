@@ -4,7 +4,7 @@ const db = require('./travelSchema.js');
 mongoose.connect('mongodb://localhost/travelSchema',
 {useNewUrlParser: true, useUnifiedTopology: true});
 
-let addUser = (name, email) => {
+let addUser = (name, email, cb) => {
   var user = {
     "name": name,
     "email": email,

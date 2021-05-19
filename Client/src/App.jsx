@@ -11,22 +11,18 @@ const App = (props) => {
   const [email, setEmail] = useState(null);
 
 
-
-
-
-
-
-
   return(
     <div className="container border">
-      <div className="row">
+      <div className="row border">
         <div className="col">
       <h1>Traveler's Hub</h1>
 
         </div>
-      <img src="airplane.png"/>
+        <div className="col">
+      <img src="airplane.png" className="img-fluid"/>
+        </div>
         <div className="col text-right">
-      <Login setName={setName} setEmail={setEmail}/>
+      <Login setName={setName} setEmail={setEmail} name={name} email={email}/>
         </div>
       </div>
       <div className="row">
@@ -42,7 +38,7 @@ const App = (props) => {
         <WhereBeenForm name={name}/>
       </div>
       <div className="container text-center">
-      <img src="whereto.png" class="img-fluid"/>
+      <img src="whereto.png" className="img-fluid"/>
       </div>
       <div className="container border">
         <WhereToForm/>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Login = (props) => {
-  const { name, email } = props;
+  const { setName, setEmail, name, email } = props;
 
   const [login, setLogin] = useState(false);
 
@@ -32,6 +33,18 @@ const loginLink = login ? `Welcome ${name}` :
 </div>
   </div>
 
+  const addUser = (user, address) => {
+    axios({
+      method: 'POST',
+      url: '/user',
+      data: {
+        name: user,
+        email: address
+      }
+    })
+
+  }
+
 
   return(
     <div className='row'>
@@ -51,16 +64,16 @@ const loginLink = login ? `Welcome ${name}` :
               <div className="modal-body">
               <form>
                   <label className="row text-left">Username:
-                  <input placeholder="Enter username here" className="w-100"/>
+                  <input placeholder="Enter username here" className="w-100" onChange={(e) => {setName(e.target.value)}}/>
                   </label>
                   <label className="row text-left">User email:
-                  <input placeholder="Enter email address here" className="w-100"/>
+                  <input placeholder="Enter email address here" className="w-100" onChange={(e) => {setEmail(e.target.value)}}/>
                   </label>
                 </form>
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Create Account</button>
+                <button type="button" className="btn btn-primary" onClick={()=> {addUser(name, email)}}>Create Account</button>
               </div>
             </div>
           </div>
