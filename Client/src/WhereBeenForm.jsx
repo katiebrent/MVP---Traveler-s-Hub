@@ -5,6 +5,7 @@ import ShowMeMyStats from './ShowMeMyStats.jsx';
 
 
 const WhereBeenForm = (props) => {
+  const {name} = props;
 
   return(
     <div>
@@ -14,7 +15,7 @@ const WhereBeenForm = (props) => {
         </div>
         </div>
     <div className="row">
-      <AddCountry/>
+      <AddCountry name={name}/>
       <ShowMeMyStats/>
       <ShowMeMyMap/>
     </div>

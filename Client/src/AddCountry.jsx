@@ -2,8 +2,15 @@ import React, { useState } from 'react';
 import CountrySelect from 'react-bootstrap-country-select';
 
 const AddCountry = (props) => {
-  const [ value, setValue] = useState(null);
-  const [budget, setBudget] = useState("Select Budget")
+  const [value, setValue] = useState(null);
+  const [budget, setBudget] = useState("Select Budget");
+
+
+  const handleAddCountry = (country, bdgt) => {
+    console.log('this is the country object', country)
+
+
+  }
 
   return(
     <div className='col-7'>
@@ -28,7 +35,7 @@ const AddCountry = (props) => {
         </div>
       </div>
       <div className= "col">
-      <button type="button">
+      <button type="button" onClick={() => {handleAddCountry(value, budget)}}>
         Add Country
       </button>
       </div>

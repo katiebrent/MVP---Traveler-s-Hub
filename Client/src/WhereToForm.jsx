@@ -21,7 +21,7 @@ return (
         size='sm'
         />
       </div>
-      <button type="button">
+      <button type="button" onClick={() => {findPeople(value.alpha2)}}>
         Find People Who Have Been!
       </button>
   </div>

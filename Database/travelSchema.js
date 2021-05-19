@@ -1,14 +1,11 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/travelSchema',
-{useNewUrlParser: true, useUnifiedTopology: true});
 
 let travelSchema = mongoose.Schema({
   name: String,
   email: String,
   countries: [{
-    country_id: Number,
+    country_id: String,
     country_name: String,
-    continent: String,
     budget: String
   }],
 },{collection: "travelers"}
