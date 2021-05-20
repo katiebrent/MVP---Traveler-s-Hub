@@ -27,12 +27,12 @@ const App = (props) => {
         </div>
       </div>
       <div className="row">
-      <h3 className="container text-center bg-primary rounded p-2 m-2">Welcome to Traveler's Hub, where you can keep track of where you've been, and plan future trips by connecting with those who have been there before!
+      <h4 className="container text-center bg-primary rounded p-2 m-2">Welcome to Traveler's Hub, where you can keep track of where you've been, and plan future trips by connecting with those who have been there before!
       &nbsp;
       &nbsp;
       &nbsp;
       &nbsp;
-      </h3>
+      </h4>
       <h5>{ }</h5>
       </div>
       <div className="row">
@@ -53,12 +53,12 @@ const App = (props) => {
       </div>
       <div className="row text-center t-2">
       <h5>{ }</h5>
-      <h3 className="container text-center bg-primary rounded p-2 m-2">Safe Travels!
+      <h4 className="container text-center bg-primary rounded p-2 m-2">Safe Travels!
       &nbsp;
       &nbsp;
       &nbsp;
       &nbsp;
-      </h3>
+      </h4>
       </div>
     </div>
   )

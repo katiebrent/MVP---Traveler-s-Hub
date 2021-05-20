@@ -15,6 +15,9 @@ const Login = (props) => {
         email: address
       }
     })
+    .then ((resp) => {
+      alert('Thank you for creating an account! Log in to get started!')
+    })
   }
 
   const logIn = (e, userName) => {

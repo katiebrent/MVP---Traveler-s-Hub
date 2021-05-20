@@ -9,27 +9,34 @@ const AddCountry = (props) => {
 
 
   const handleAddCountry = (country, bdgt) => {
-    axios({
-      method: 'PUT',
-      url: '/user',
-      data: {
-        countryObj: country,
-        budget: bdgt,
-        name: name
-      }
-    })
-    .then (() => {
-      var currentCountries = countries;
-      var newCountry = {
-        country_id: country.alpha2,
-        country_name: country.name,
-        budget: bdgt
-      }
-      var newCountries = currentCountries.concat(newCountry)
-      setCountries(newCountries);
-      console.log(newCountries);
+    if(name === null) {
+      alert("Remember to login or create an account first!")
+      setValue(null);
+      setBudget("Select Budget")
+    } else {
+      axios({
+        method: 'PUT',
+        url: '/user',
+        data: {
+          countryObj: country,
+          budget: bdgt,
+          name: name
+        }
+      })
+      .then (() => {
+        var currentCountries = countries;
+        var newCountry = {
+          country_id: country.alpha2,
+          country_name: country.name,
+          budget: bdgt
+        }
+        var newCountries = currentCountries.concat(newCountry)
+        setCountries(newCountries);
+        setValue(null);
+        setBudget("Select Budget");
 
-    })
+      })
+    }
 
   }
 
