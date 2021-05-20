@@ -13,7 +13,7 @@ const WhereToForm = (props) => {
     axios.get(`/friend/?country=${value.alpha2}`)
     .then((resp) => {
       setFriends(resp.data);
-      console.log('this is the response', resp)
+      console.log('this is the response', resp);
     })
     .catch((err) => {
       console.log(err)
@@ -21,6 +21,12 @@ const WhereToForm = (props) => {
 
 
   }
+
+  const handleClose = () => {
+    setValue(null);
+  }
+
+  const modalBody = !value ? '' : <Friends country={value} friends={friends}/>
 
 return (
     <div>
@@ -45,12 +51,12 @@ return (
       <div className="modal-content">
         <div className="modal-header">
           <h5 className="modal-title" id="exampleModalLabel">Who to connect with!</h5>
-          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={() => {handleClose()}}>
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div className="modal-body">
-          <Friends country={value} friends={friends}/>
+          {modalBody}
         </div>
       </div>
     </div>
