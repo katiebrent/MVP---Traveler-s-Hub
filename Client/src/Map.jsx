@@ -27,7 +27,7 @@ if(dataArr.length < 1) {
     "You haven't visited anywhere yet! Start exploring or enter countries you have visited to see them on your map!"
   )
 } else {
-  const map = count % 2 === 0 ? <WorldMap key="1" color="dodgerblue" data={data} size="responsive" /> : <WorldMap key="2" color="dodgerblue" data={data} size="responsive" />
+  const map = count % 2 === 0 ? <WorldMap key="1" color="dodgerblue" data={data} size="responsive" strokeOpacity={.4}/> : <WorldMap key="2" color="dodgerblue" data={data} size="responsive" strokeOpacity={.4} />
   return (
     <div>
      {map}
