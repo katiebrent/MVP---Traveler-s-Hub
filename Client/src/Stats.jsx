@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactSvgPieChart from 'react-svg-piechart';
+import { PieChart } from 'react-minimal-pie-chart';
 
 const Stats = (props) => {
   const {countries} = props;
@@ -37,12 +38,15 @@ const Stats = (props) => {
   }
 
   const pieData = [
-    {title: 'Budget Travel', value: budget, color: '#4FC3F7'},
-    {title: 'Mid Priced Travel', value: midTier, color: '#0288D1'},
-    {title: 'Luxury Travel', value: luxury, color: '#0D47A1'}
+    {title: 'Budget Travel', value: budget, color: '#4FC3F7', key: 'Roughing It'},
+    {title: 'Mid Priced Travel', value: midTier, color: '#0288D1', key: 'Mid Tier'},
+    {title: 'Luxury Travel', value: luxury, color: '#0D47A1', key: 'Luxury'}
   ]
 
-
+  const defaultLabelStyle = {
+    fontSize: '5px',
+    fontFamily: 'sans-serif',
+  };
 
 
 
@@ -52,8 +56,8 @@ const Stats = (props) => {
     return(
       <div>
         <h4>You have been to {count} countries!</h4>
-        <div>
-          <ReactSvgPieChart data={pieData} />
+        <div className="row text-center p-5">
+          <PieChart data={pieData} label={({dataEntry}) => `${dataEntry.key} ${Math.round(dataEntry.percentage)}%`} labelStyle={{...defaultLabelStyle,}} labelPosition={70}/>
         </div>
         <h5>
           You are typically a {travelerType} traveler, staying in {accommodations} on {max} of your trips.
