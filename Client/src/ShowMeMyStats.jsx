@@ -8,7 +8,7 @@ const ShowMeMyStats = (props) => {
     <div className="col text-center small">
 
     <button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#stats">
-  Show Me My Stats
+  Show My Stats
     </button>
     <div className="modal" id="stats" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div className="modal-dialog" role="document">

@@ -9,7 +9,7 @@ const ShowMeMyList = (props) => {
     <div className="col text-center">
 
 <button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#list">
-  Show Me My List
+  Show My List
 </button>
 
 <div className="modal" id="list" tabIndex="-1" role="dialog">

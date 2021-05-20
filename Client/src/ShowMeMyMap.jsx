@@ -9,7 +9,7 @@ const ShowMeMyMap = (props) => {
     <div className="col text-center">
 
 <button type="button" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#map">
-  Show Me My Map
+  Show My Map
 </button>
 
 <div className="modal" id="map" tabIndex="-1" role="dialog">
