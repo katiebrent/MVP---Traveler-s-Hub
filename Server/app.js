@@ -17,6 +17,17 @@ app.get('/user', (req, res) => {
   })
 })
 
+app.get('/friend', (req, res) => {
+  console.log('this is req.query', req.query)
+  db.findFriends(req.query, (err, resp) => {
+    if(err) {
+      console.log('error fetching Friends in server')
+    } else {
+      res.send(resp)
+    }
+  })
+})
+
 app.post('/user', (req, res) => {
   console.log('this is the user data', req.body);
   var name = req.body.name;

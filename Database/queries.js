@@ -7,7 +7,6 @@ mongoose.connect('mongodb://localhost/travelSchema',
 let fetchUser = (username, cb) => {
   db.travelers.find({name: username.name})
   .then ((response) => {
-    console.log('this is the response on login', response)
     cb(null, response)
   })
   .catch((err) => {
@@ -51,6 +50,20 @@ let addCountry = (request, cb) => {
   })
 }
 
+let findFriends = (req, cb) => {
+  console.log('this is the req at findFriends', req)
+  db.travelers.find({'countries.country_id': req.country})
+  .then((resp) => {
+    cb(null, resp)
+    console.log('this is the resp', resp)
+  })
+  .catch((err) => {
+    console.log('error fetching friends')
+  })
+
+}
+
 module.exports.addUser = addUser;
 module.exports.addCountry = addCountry;
 module.exports.fetchUser = fetchUser;
+module.exports.findFriends = findFriends;

@@ -20,11 +20,14 @@ const AddCountry = (props) => {
     })
     .then (() => {
       var currentCountries = countries;
-      currentCountries.push({
+      var newCountry = {
         country_id: country.alpha2,
         country_name: country.name,
         budget: bdgt
-      })
+      }
+      var newCountries = currentCountries.concat(newCountry)
+      setCountries(newCountries);
+      console.log(newCountries);
 
     })
 
