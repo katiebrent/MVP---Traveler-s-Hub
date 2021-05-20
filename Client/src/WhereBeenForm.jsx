@@ -12,7 +12,7 @@ const WhereBeenForm = (props) => {
     <div>
       <div className="row">
         <div className="col text-center">
-          <h4>Where Have You Been?</h4>
+          <h2>Where Have You Been?</h2>
         </div>
         </div>
     <div className="row p-2">

@@ -32,7 +32,7 @@ return (
     <div>
     <div className="row">
       <div className="col text-center">
-        <h4>Where to Next?</h4>
+        <h2>Where to Next?</h2>
       </div>
       </div>
   <div className="row p-2">
