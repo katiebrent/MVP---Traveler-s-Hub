@@ -6,7 +6,9 @@ import ShowMeMyList from './ShowMeMyList.jsx'
 
 
 const WhereBeenForm = (props) => {
-  const {name, countries, setCountries} = props;
+  const {name, countries, setCountries, setCount, count} = props;
+
+  console.log('this is countries at where been form', countries)
 
   return(
     <div>
@@ -16,10 +18,10 @@ const WhereBeenForm = (props) => {
         </div>
         </div>
     <div className="row p-2">
-      <AddCountry name={name} countries={countries} setCountries={setCountries}/>
+      <AddCountry name={name} countries={countries} setCountries={setCountries} setCount={setCount}/>
       <ShowMeMyList countries={countries}/>
       <ShowMeMyStats countries={countries}/>
-      <ShowMeMyMap countries={countries}/>
+      <ShowMeMyMap countries={countries} count={count}/>
     </div>
     </div>
 

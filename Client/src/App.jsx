@@ -10,6 +10,7 @@ const App = (props) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [countries, setCountries] = useState([]);
+  const [count, setCount] = useState(countries.length);
 
 
   return(
@@ -37,7 +38,7 @@ const App = (props) => {
       </div>
       <div className="row">
       <div className="container shadow-sm rounded">
-        <WhereBeenForm name={name} countries={countries} setCountries={setCountries}/>
+        <WhereBeenForm name={name} countries={countries} setCountries={setCountries} count={count} setCount={setCount}/>
       </div>
       </div>
       <div className="row">

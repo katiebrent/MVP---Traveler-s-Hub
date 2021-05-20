@@ -5,7 +5,7 @@ import axios from 'axios';
 const AddCountry = (props) => {
   const [value, setValue] = useState(null);
   const [budget, setBudget] = useState("Select Budget");
-  const {name, countries, setCountries} = props;
+  const {name, countries, setCountries, setCount} = props;
 
 
   const handleAddCountry = (country, bdgt) => {
@@ -34,6 +34,7 @@ const AddCountry = (props) => {
         setCountries(newCountries);
         setValue(null);
         setBudget("Select Budget");
+        setCount(newCountries.length);
 
       })
     }
