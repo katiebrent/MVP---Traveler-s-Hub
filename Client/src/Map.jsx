@@ -1,11 +1,13 @@
-import React from 'react';
+import React,  { useState } from 'react';
 import { WorldMap } from "react-svg-worldmap";
 
 
 const TravelMap = (props) => {
   const {countries} = props;
 
+
   // const defaultData = [{ country: "us", value: 1 }]
+  console.log('this is countries data at travel Map', countries)
 
   const dataArr = [];
 

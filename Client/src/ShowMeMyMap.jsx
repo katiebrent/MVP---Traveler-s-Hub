@@ -3,7 +3,7 @@ import TravelMap from './Map.jsx'
 
 
 const ShowMeMyMap = (props) => {
-  const {countries} = props;
+  const {countries, dataArr} = props;
 
   return (
     <div className="col text-center">
@@ -22,15 +22,11 @@ const ShowMeMyMap = (props) => {
         </button>
       </div>
       <div className="modal-body">
-        <TravelMap countries={countries}/>
+        <TravelMap countries={countries} />
       </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
-</div>
 </div>
   )
 }

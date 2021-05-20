@@ -33,8 +33,10 @@
     "react-bootstrap-country-select": "^0.7.12",
     "react-bootstrap-dropdown": "^0.3.0",
     "react-dom": "^17.0.2",
+    "react-minimal-pie-chart": "^8.2.0",
     "react-modal": "^3.13.1",
     "react-scripts": "^4.0.3",
+    "react-svg-piechart": "^2.4.2",
     "react-svg-worldmap": "^1.1.0",
     "webpack": "^5.37.0"
   },

@@ -2,6 +2,7 @@ import React from 'react';
 import AddCountry from './AddCountry.jsx';
 import ShowMeMyMap from './ShowMeMyMap.jsx';
 import ShowMeMyStats from './ShowMeMyStats.jsx';
+import ShowMeMyList from './ShowMeMyList.jsx'
 
 
 const WhereBeenForm = (props) => {
@@ -16,6 +17,7 @@ const WhereBeenForm = (props) => {
         </div>
     <div className="row p-2">
       <AddCountry name={name} countries={countries} setCountries={setCountries}/>
+      <ShowMeMyList countries={countries}/>
       <ShowMeMyStats countries={countries}/>
       <ShowMeMyMap countries={countries}/>
     </div>
