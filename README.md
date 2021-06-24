@@ -18,6 +18,9 @@ Rather than having to send an open ended question and maybe get responses back t
 Quote from You
 Travel is the ultimate way to connect through stories and life changing experiences.
 
+Preview
+
+
 How to Get Started
 npm install
 npm run react-dev
